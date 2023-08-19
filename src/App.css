@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+body{
+  font-family: 'Rajdhani', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.news{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.newsItem{
+  flex: 1 1 25%;
+}
+.loading{
+  height: 60vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.load{
+  height: 60vh;
+}
+
+.skeleton{
+  opacity: 0.6;
+  animation: pulse 250ms linear infinite alternate;
+}
+.skeleton-img{
+  width: 100%;
+  height: 52.5%;
+}
+.skeleton-text{
+  height: 0.5rem;
+  width: 90%;
+  margin-bottom: 0.85rem;
+}
+.skeleton-text:last-child{
+  /* margin-bottom: 0; */
+  width: 10%;
+}
+.skeleton-p{
+  width: 100%;
+  height: 0.25rem;
+  margin-bottom: 1rem;
+}
+.skeleton-p:first-child{
+  margin-top: 25% ;
+}
+
+@keyframes pulse{
+  0%{
+    background-color: #202020;
   }
-  to {
-    transform: rotate(360deg);
+  100%{
+    background-color: #444;
   }
+
 }
